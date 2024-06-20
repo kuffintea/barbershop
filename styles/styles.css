@@ -1,0 +1,238 @@
+@font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 400;
+    src: url("../fonts/pt-sans-regular.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "PT Sans";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/pt-sans-bold.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "PT Sans";
+    font-style: italic;
+    font-weight: 400;
+    src: url("../fonts/pt-sans-italic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "PT Sans";
+    font-style: italic;
+    font-weight: 700;
+    src: url("../fonts/pt-sans-bold-italic.woff2") format("woff2");
+    font-display: swap;
+  }
+  @font-face {
+    font-family: "PT Sans Narrow";
+    font-style: normal;
+    font-weight: 700;
+    src: url("../fonts/pt-sans-narrow-bold.woff2") format("woff2");
+    font-display: swap;
+  }
+  .visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  :root {
+    /*texts*/
+    --normal: 400;
+    --bold: 700;
+    --text-small: 14px;
+    --text-small-2: 16px;
+    --text-medium: 20px;
+    --text-medium-2: 22px;
+    --text-medium-3: 24px;
+    --text-large: 28px;
+    --text-large-2: 29px;
+    --text-big: 32px;
+    --text-big-2: 35px;
+    --family-basic: "PT Sans", sans-serif;
+    --family-second: "PT Sans Narrow", sans-serif;
+    /*colors*/
+    --color-main-dark: #000000;
+    --color-main-second: #242424;
+    --color-main-medium: #595959;
+    --color-main-light: #e7e7e7;
+    --color-main-extra-light: #f6f6f6;
+    --color-additional-dark: #4e2e0e;
+    --color-additional-second: #814b18;
+    --color-additional-medium: #af7842;
+    --color-additional-light: #dbb590;
+    --color-additional-extra-light: #fbf7f4;
+    --color-status-error: #ea5454;
+    --color-status-warning: #fd912e;
+    --color-status-succes: #00e484;
+    --color-extra: #ffffff;
+    /*others*/
+    --box-shadow-small: 0 4px 8px rgba(79, 70, 60, 0.16);
+    --box-shadow-medium: 0 8px 16px rgba(79, 70, 60, 0.16);
+    --box-shadow-large: 0 18px 40px rgba(79, 70, 60, 0.16);
+  }
+  .heading-1 {
+    font-family: var(--family-second);
+    font-size: var(--text-big);
+    line-height: var(--text-big-2);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+  }
+  .heading-2 {
+    font-family: var(--family-second);
+    font-size: var(--text-medium-3);
+    line-height: var(--text-large-2);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+  }
+  .heading-3 {
+    font-family: var(--family-second);
+    font-size: var(--text-medium);
+    line-height: var(--text-large);
+    font-weight: var(--bold);
+    text-transform: uppercase;
+  }
+  .text-bold {
+    font-weight: var(--bold);
+  }
+  .text-uppercase {
+    text-transform: uppercase;
+  }
+  .text-decoration-none {
+    text-decoration: none;
+  }
+  .text-basic {
+    font-size: var(--text-small);
+    line-height: var(--text-medium);
+  }
+  .text-second {
+    font-size: var(--text-small-2);
+    line-height: var(--text-medium-2);
+    font-weight: var(--bold);
+  }
+  .text-special {
+    color: var(--color-additional-medium);
+  }
+  .text-special-dark {
+    color: var(--color-additional-second);
+  }
+  body {
+    font-family: var(--family-basic);
+    font-style: normal;
+    font-size: var(--text-small-2);
+    line-height: var(--text-medium-3);
+    font-weight: var(--normal);
+    color: var(--color-main-second);
+    background-color: var(--color-additional-extra-light);
+    box-sizing: border-box;
+    margin: 0;
+  }
+  a {
+    display: inline-block;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+  }
+  ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+  .btn {
+    padding: 14px 20px;
+    background-color: var(--color-main-dark);
+    color: var(--color-extra);
+    font-family: PT Sans;
+    font-size: var(--text-small-2);
+    font-weight: var(--bold);
+    line-height: var(--text-small-2);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+  }
+  .btn.btn-current {
+    cursor: default;
+  }
+  .btn.btn-current, .btn.btn-second {
+    color: var(--color-main-second);
+    background-color: var(--color-extra);
+  }
+  .btn:not(.btn-current):not([disabled]):not(.disabled):is(:hover, :focus) {
+    background-color: var(--color-additional-second);
+  }
+  .btn:not([disabled]):not(.disabled):focus {
+    box-shadow: inset 0 0 0 2px var(--color-additional-light);
+  }
+  .btn.btn-second:is(:hover, :focus) {
+    background-color: var(--color-additional-light);
+  }
+  .btn.btn-second:focus {
+    box-shadow: inset 0 0 0 2px var(--color-additional-medium);
+  }
+  .btn[disabled], .btn.disabled {
+    color: var(--color-main-light);
+    background-color: var(--color-main-medium);
+    cursor: default;
+  }
+  .main-header {
+    background-color: var(--color-main-dark);
+    color: var(--color-extra);
+    font-family: var(--family-second);
+  }
+  .nav .nav-link {
+    color: var(--color-extra);
+    text-decoration: none;
+  }
+  .main-index {
+    background: var(--color-main-dark) url("../images/background.jpg") no-repeat;
+    background-size: 100%;
+    color: var(--color-extra);
+  }
+  .container {
+    max-width: 1020px;
+    margin: 0 auto;
+  }
+  .wrapper {
+    background: var(--color-additional-extra-light) url("../images/pattern.png");
+    color: var(--color-main-second);
+  }
+  .section-text {
+    color: var(--color-main-medium);
+  }
+  .contacts address {
+    font-style: normal;
+  }
+  .breadcrumbs-link {
+    font-size: var(--text-small-2);
+    line-height: var(--text-medium-2);
+  }
+  .breadcrumbs-link-current {
+    color: var(--color-main-medium);
+  }
+  .sort-container {
+    background-color: var(--color-extra);
+    box-shadow: var(--box-shadow-small);
+    padding: 16px;
+  }
+  .main-footer {
+    background: var(--color-main-second) url(../images/pattern.png);
+    color: var(--color-extra);
+  }
+  .main-footer .map-link {
+    font-size: var(--text-medium);
+    line-height: 26px;
+    text-transform: uppercase;
+  }
+  .main-footer .htmlacademy-link {
+    color: var(--color-additional-light);
+  }
