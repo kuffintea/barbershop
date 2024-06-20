@@ -173,16 +173,19 @@
   .btn:not([disabled]):not(.disabled):focus {
     box-shadow: inset 0 0 0 2px var(--color-additional-light);
   }
-  .btn.btn-second:is(:hover, :focus) {
+  .btn.btn-second:not([disabled]):not(.disabled):is(:hover, :focus) {
     background-color: var(--color-additional-light);
   }
-  .btn.btn-second:focus {
+  .btn.btn-second:not([disabled]):not(.disabled):focus {
     box-shadow: inset 0 0 0 2px var(--color-additional-medium);
   }
   .btn[disabled], .btn.disabled {
     color: var(--color-main-light);
     background-color: var(--color-main-medium);
     cursor: default;
+  }
+  .btn-prev svg {
+    transform: rotate(180deg);
   }
   .main-header {
     background-color: var(--color-main-dark);
@@ -209,8 +212,29 @@
   .section-text {
     color: var(--color-main-medium);
   }
+  .advantages-item {
+    position: relative;
+  }
+  .advantages-item::before {
+    content: '';
+    position: absolute;
+    top: 54px;
+    height: 13px;
+    width: 13px;
+    background-color: var(--color-extra);
+    transform: rotate(45deg);
+  }
   .contacts address {
     font-style: normal;
+  }
+  .breadcrumbs-item:not(:last-of-type)::after {
+    content: '';
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    background-color: var(--color-main-second);
+    transform: rotate(45deg);
+    margin: 5px 10px;;
   }
   .breadcrumbs-link {
     font-size: var(--text-small-2);
