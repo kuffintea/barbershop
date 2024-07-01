@@ -44,7 +44,7 @@
                       <span class="heading-3">Стрижка машинкой</span>
                       <span class="cart-price text-special">800 ₽</span>
                     </div>
-                    <button class="btn" type="button">
+                    <button class="btn btn-cart" type="button">
                       <span class="visually-hidden">Удалить из корзины</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill="currentcolor" fill-rule="evenodd" d="M3.42 1 3.7.5 4 0H12l.29.5.28.5h3.05l-.14 1.12-1.57 13-.11.88H2.19l-.1-.88-1.58-13L.37 1h3.05Zm.54 13L2.63 3h10.74l-1.33 11H3.96ZM9 4.93l-.5 7 2 .14.5-7-2-.14Zm-3.5 7.14-.5-7 2-.14.5 7-2 .14Z" clip-rule="evenodd"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
                     </button>
@@ -54,7 +54,7 @@
                       <span class="heading-3">Стрижка усов</span>
                       <span class="cart-price text-special">1200 ₽</span>
                     </div>
-                    <button class="btn" type="button">
+                    <button class="btn btn-cart" type="button">
                       <span class="visually-hidden">Удалить из корзины</span>
                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill="currentcolor" fill-rule="evenodd" d="M3.42 1 3.7.5 4 0H12l.29.5.28.5h3.05l-.14 1.12-1.57 13-.11.88H2.19l-.1-.88-1.58-13L.37 1h3.05Zm.54 13L2.63 3h10.74l-1.33 11H3.96ZM9 4.93l-.5 7 2 .14.5-7-2-.14Zm-3.5 7.14-.5-7 2-.14.5 7-2 .14Z" clip-rule="evenodd"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
                     </button>
@@ -94,7 +94,7 @@
           <section class="filters">
             <h2 class="visually-hidden">Фильтры</h2>
             <form action="https://echo.htmlacademy.ru/" method="get">
-              <fieldset>
+              <fieldset class="price-filter">
                 <legend class="heading-3">Цена</legend>
                 <div class="double-range-slider">
                   <button class="range-btn range-btn-min" type="button"></button>
@@ -194,13 +194,13 @@
                 <option value="cheap">Сначала дешёвые</option>
               </select>
               <ul class="mode-list default-list">
-                <li>
+                <li class="mode-item">
                   <a class="btn btn-second" href="#">
                     <span class="visually-hidden">Показать списком</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill="currentcolor" fill-rule="evenodd" d="M2 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-2 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0ZM7 1a1 1 0 0 0 0 2h8a1 1 0 1 0 0-2H7ZM6 8c0-.6.4-1 1-1h8a1 1 0 1 1 0 2H7a1 1 0 0 1-1-1Zm1 5a1 1 0 1 0 0 2h8a1 1 0 1 0 0-2H7Z" clip-rule="evenodd"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
                   </a>
                 </li>
-                <li>
+                <li class="mode-item">
                   <a class="btn" href="#">
                     <span class="visually-hidden">Показать плиткой</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><g clip-path="url(#a)"><path fill="currentcolor" fill-rule="evenodd" d="M0 2a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm6 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0ZM0 8a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm-8 6a2 2 0 1 0-4 0 2 2 0 0 0 4 0Zm2 0a2 2 0 1 1 4 0 2 2 0 0 1-4 0Zm10 0a2 2 0 1 0-4 0 2 2 0 0 0 4 0Z" clip-rule="evenodd"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v16H0z"/></clipPath></defs></svg>
@@ -284,28 +284,28 @@
             </ul>
             <div class="pagination-container">
               <ol class="pagination default-list">
-                <li>
+                <li class=pagination-item>
                   <a class="btn btn-prev disabled">
                     <span class="visually-hidden">На предыдущую страницу</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentcolor" fill-rule="evenodd" d="M9.6 8 4.3 2.7l1.4-1.4L12.4 8l-6.7 6.7-1.4-1.4L9.6 8Z" clip-rule="evenodd"/></svg>
                   </a>
                 </li>
-                <li>
+                <li class="pagination-item">
                   <a class="btn btn-page btn-current" aria-current="page">1</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                   <a class="btn btn-page" href="#">2</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                   <a class="btn btn-page" href="#">3</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                   <a class="btn btn-page" href="#">4</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                   <a class="btn btn-page" href="#">5</a>
                 </li>
-                <li>
+                <li class="pagination-item">
                   <a class="btn btn-next" href="#">
                     <span class="visually-hidden">На следующую страницу</span>
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none" viewBox="0 0 16 16"><path fill="currentcolor" fill-rule="evenodd" d="M9.6 8 4.3 2.7l1.4-1.4L12.4 8l-6.7 6.7-1.4-1.4L9.6 8Z" clip-rule="evenodd"/></svg>

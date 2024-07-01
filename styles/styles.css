@@ -182,9 +182,12 @@ img {
   margin: 0;
   list-style: none;
 }
+.btn svg {
+  display: block;
+}
 .btn {
   display: inline-block;
-  height: 44px;
+  min-height: 44px;
   min-width: 56px;
   padding: 14px 20px;
   background-color: var(--color-main-dark);
@@ -247,7 +250,10 @@ img {
   min-width: 50px;
 }
 .btn-more {
-  padding: 14px 22px;
+  word-spacing: 5px;
+}
+.btn-cart {
+  height: 44px;
 }
 .btn-icon {
   background-repeat: no-repeat;
@@ -294,8 +300,13 @@ img {
 .nav-list {
   display: flex;
   flex-wrap: wrap;
+  max-width: 50%;
+}
+.logo-link ~ .nav-list {
+  max-width: calc(50% - 120px);
 }
 .nav-user {
+  justify-content: end;
   margin-left: auto;
 }
 .nav-item {
@@ -368,6 +379,8 @@ img {
   padding: 40px;
   box-sizing: border-box;
   z-index: 1;
+  max-height: 475px;
+  overflow: auto;
 }
 .popover.closed {
   display: none;
@@ -653,7 +666,8 @@ img {
 }
 .breadcrumbs {
   display: flex;
-  gap: 32px;
+  flex-wrap: wrap;
+  gap: 10px 32px;
   margin-bottom: 32px;
 }
 .breadcrumbs-item {
@@ -694,7 +708,7 @@ img {
   padding: 0;
   margin-bottom: 22px;
 }
-.filters fieldset:first-of-type legend {
+.price-filter legend {
   margin-bottom: 30px;
 }
 :is(.filters, .modal) label {
@@ -739,6 +753,7 @@ img {
 }
 .filters .inputs-wrapper {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 4px;
   max-width: 220px;
@@ -757,6 +772,7 @@ img {
 }
 .range-label input::-webkit-outer-spin-button,
 .range-label input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
   appearance: none;
 }
 .ckeckmark {
@@ -827,15 +843,22 @@ img {
   outline: none;
   background: url(../images/svg/arrow-down.svg) no-repeat right 14px center;
   cursor: pointer;
+  -webkit-appearance: none;
   appearance: none;
 }
 .mode-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: end;
   margin-left: auto;
+  max-width: 250px;
+}
+.mode-item {
+  display: flex;
 }
 .product-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 220px));
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
   gap: 20px;
   margin-bottom: 24px;
 }
@@ -884,6 +907,10 @@ img {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
+  max-width: 490px;
+}
+.pagination-item {
+  display: flex;
 }
 .main-footer {
   background: var(--color-main-second) url(../images/pattern.png);
@@ -925,6 +952,9 @@ img {
   gap: 8px;
   margin-bottom: 36px;
 }
+.main-footer .social-item {
+  display: flex;
+}
 .main-footer .htmlacademy-link {
   color: var(--color-additional-light);
 }
@@ -936,6 +966,7 @@ img {
   width: 100%;
   height: 100%;
   background-color: var(--color-main-dark-80);
+  z-index: 2;
 }
 .modal-container.closed {
   display: none;
@@ -949,6 +980,9 @@ img {
   min-height: 150px;
   box-sizing: border-box;
   padding: 40px;
+  max-height: 100%;
+  overflow: auto;
+  scrollbar-width: none;
 }
 .modal .modal-heading {
   margin-bottom: 24px;
@@ -959,6 +993,7 @@ img {
 .modal .form-details {
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .modal :not(.modal-close).btn {
   width: 100%;
