@@ -769,6 +769,7 @@ img {
   text-align: center;
   background-color: transparent;
   border: none;
+  appearance: textfield;
 }
 .range-label input::-webkit-outer-spin-button,
 .range-label input::-webkit-inner-spin-button {
